@@ -28,21 +28,7 @@ function command_not_found_handler {
     return 127
 }
 
-# Detect the AUR wrapper
-if pacman -Qi yay &>/dev/null ; then
-   aurhelper="yay"
-elif pacman -Qi paru &>/dev/null ; then
-   aurhelper="paru"
-fi
-
-function in {
-    local pkg="$1"
-    if pacman -Si "$pkg" &>/dev/null ; then
-        sudo pacman -S "$pkg"
-    else 
-        "$aurhelper" -S "$pkg"
-    fi
-}
+aurhelper="yay"
 
 # Helpful aliases
 alias  l='eza -lh  --icons=auto' # long list
@@ -55,7 +41,6 @@ alias pl='$aurhelper -Qs' # list installed package
 alias pa='$aurhelper -Ss' # list availabe package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
-alias vc='code --disable-gpu' # gui code editor
 
 # Handy change dir shortcuts
 alias ..='cd ..'
