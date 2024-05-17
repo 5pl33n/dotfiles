@@ -24,8 +24,8 @@ style = "Regular"
 # WINDOW
 
 [window]
-padding = { x = 15, y = 10 }
-dynamic_padding = true
+padding = { x = 0, y = 0 }
+dynamic_padding = false
 decorations = "None"
 opacity = 0.6
 blur = true
