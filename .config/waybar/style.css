@@ -102,7 +102,7 @@ tooltip {
 #workspaces,
 #taskbar {
    padding: 0px;
-   background: @yellow;
+   background: @red;
 }
 
 #wireplumber,
@@ -131,14 +131,14 @@ tooltip {
     border-radius: 0px 19px 19px 0px;
     margin-right: 12px;
     padding-right: 0px;
-    background: @yellow;
+    background: @red;
 }
 
 #custom-cl_end {
     border-radius: 19px 0px 0px 19px;
     margin-left: 12px;
     padding-left: 0px;
-    background: @yellow;
+    background: @red;
 }
 
 #custom-rr_end {
