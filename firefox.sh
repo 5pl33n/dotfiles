@@ -7,7 +7,7 @@ cd $dir/chrome
 touch userChrome.css
 cat << EOF
 #nav-bar {
-  margin-top: -2px !important;
+  margin-top: -1px !important;
 }
 
 #TabsToolbar {
