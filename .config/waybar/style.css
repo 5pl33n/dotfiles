@@ -155,3 +155,11 @@ tooltip {
     background: @green;
 }
 
+#custom-padd {
+  margin-left: 1px;
+}
+
+#custom-fpadd {
+  margin-right: 2px;
+}
+
