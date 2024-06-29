@@ -1,20 +1,20 @@
 {
-    "height": 28, 
+    "height": 24, 
     "layer": "top",
     "position": "top",
     "output": "eDP-1",
 
     "modules-left": ["custom/padd","custom/ll_end", "cpu", "backlight", "custom/lr_end","custom/padd"],
     "modules-center": ["custom/padd","custom/cl_end","hyprland/workspaces", "custom/cr_end","custom/padd"],
-    "modules-right": ["custom/padd","custom/rl_end","wireplumber", "network", "battery", "clock", "custom/powermenu", "custom/rr_end","custom/padd"],
+    "modules-right": ["custom/padd","custom/rl_end","wireplumber", "network", "battery", "clock", "custom/powermenu", "custom/rr_end","custom/fpadd"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "persistent-workspaces": {
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+/*        "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
@@ -25,7 +25,7 @@
             "8": [],
             "9": [],
             "10": []
-        }
+        }*/
     },
 
     "cpu": {
@@ -37,7 +37,7 @@
     "backlight": {
         "device": "nvidia_0",
       	"max-length": "4",
-        "format": "{icon}    {percent}%",
+        "format": "{icon}   {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "on-click": "",
         "on-scroll-up": "brightnessctl set 10%-",
@@ -95,13 +95,13 @@
     },
 
     "clock": {
-        "format-alt": "<span>    </span> {:%a %b %d}",
-        "format": "<span>    </span> {:%I:%M %p}"
+        "format-alt": "<span>   </span> {:%a %b %d}",
+        "format": "<span>   </span> {:%I:%M %p}"
     },
 
     "custom/powermenu": {
         "format": "",
-        "on-click": "bash ~/.config/wofi/powermenu.sh",
+        "on-click": "wlogout -b 6 -c 0 -r 0 -m 0 --protocol layer-shell",
         "tooltip": false
     },
 
@@ -146,6 +146,12 @@
 
     "custom/padd": {
         "format": "  ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/fpadd": {
+        "format": "     ",
         "interval" : "once",
         "tooltip": false
     }
