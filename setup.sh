@@ -14,4 +14,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting /usr/share/oh-my-
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+cp -a /home/spleen/5pl33n/dotfiles/. /home/spleen/
 
