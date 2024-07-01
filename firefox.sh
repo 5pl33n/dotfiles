@@ -4,18 +4,4 @@ cd .mozzilla/firefox
 local dir=$(ls | grep default-release)
 mkdir $dir/chrome 
 cd $dir/chrome
-touch userChrome.css
-cat << EOF
-#nav-bar {
-  margin-top: -1px !important;
-}
-
-#TabsToolbar {
-    visibility: collapse;
-}
-
-#sidebar-header {
-  visibility: collapse !important;
-}
-EOF > userChrome.css
-
+mv ~/5pl33n/dotfiles/firefox.css userChrome.css
