@@ -28,7 +28,7 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
-require("telescope").setup { 
+require("telescope").setup {
     pickers = {
         live_grep = {
             additional_args = function(opts)

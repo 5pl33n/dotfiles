@@ -6,6 +6,10 @@ local M = {}
 
 M.ui = {
 	theme = "catppuccin",
+  statusline = {
+    theme = "minimal",
+    separator_style = "round"
+  }
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
