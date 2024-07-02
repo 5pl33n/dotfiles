@@ -24,6 +24,8 @@ sudo unzip catppuccin-mocha.zip
 rm catppuccin-mocha.zip
 cd
 
+rm -rf .git
+
 sudo mkdir -p /etc/sddm.conf.d/
 sudo mv sddm.conf /etc/sddm.conf.d/mocha.conf
 
