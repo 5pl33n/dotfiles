@@ -33,3 +33,4 @@ sudo mkdir -p /etc/sddm.conf.d/
 sudo mv sddm.conf /etc/sddm.conf.d/mocha.conf
 
 sudo systemctl enable sddm
+sudo systemctl enable bluetooth
