@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo chmod +w /etc/sudoers.d/00_spleen
+sudo sed -i 's@spleen ALL=(ALL) ALL$spleen ALL=(ALL) NOPASSWD:ALL@g' /etc/sudoers.d/00_spleen
+
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
