@@ -30,7 +30,7 @@ _comp_options+=(globdots)
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
     printf 'zsh: command not found: %s\n' "$1"
-    local entries=( ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"} )
+    local entries=( ${(f)"$(yay -Fy --machinereadable -- "/usr/bin/$1")"} )
     if (( ${#entries[@]} )) ; then
         printf "${bright}$1${reset} may be found in the following packages:\n"
         local pkg
