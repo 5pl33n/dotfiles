@@ -1,0 +1,165 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 10px;
+}
+
+@import "mocha.css";
+
+window#waybar {
+    background: @base;
+}
+
+tooltip {
+    background: @crust;
+    color: @text;
+    border-radius: 7px;
+    border-width: 0px;
+}
+
+#workspaces button {
+    box-shadow: none;
+  	text-shadow: none;
+    padding: 0px;
+    border-radius: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 0px;
+    color: @crust;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    background: @base;
+    color: @text;
+    margin-left: 2px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-right: 2px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @sky;
+    color: @base;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+#custom-powermenu,
+#wireplumber,
+#backlight,
+#battery,
+#bluetooth,
+#custom-cliphist,
+#clock,
+#custom-cpuinfo,
+#cpu,
+#custom-gpuinfo,
+#idle_inhibitor,
+#custom-keybindhint,
+#language,
+#memory,
+#mpris,
+#network,
+#custom-notifications,
+#custom-power,
+#pulseaudio,
+#custom-spotify,
+#taskbar,
+#custom-theme,
+#tray,
+#custom-updates,
+#custom-wallchange,
+#custom-wbar,
+#window,
+#workspaces,
+#custom-ll_end,
+#custom-lr_end,
+#custom-cl_end,
+#custom-cr_end,
+#custom-rl_end,
+#custom-rr_end {
+    color: @base;
+    background: @sapphire;
+    opacity: 1;
+    margin: 3px 0px 3px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#cpu,
+#backlight {
+  background: @blue;
+}
+
+#workspaces,
+#taskbar {
+   padding: 0px;
+   background: @red;
+}
+
+#wireplumber,
+#network,
+#battery,
+#clock,
+#custom-powermenu {
+  background: @green;
+}
+
+#custom-lr_end {
+    border-radius: 0px 19px 19px 0px;
+    margin-right: 12px;
+    padding-right: 0px;
+    background: @blue;
+}
+
+#custom-ll_end {
+    border-radius: 19px 0px 0px 19px;
+    margin-left: 12px;
+    padding-left: 0px;
+    background: @blue;
+}
+
+#custom-cr_end {
+    border-radius: 0px 19px 19px 0px;
+    margin-right: 12px;
+    padding-right: 0px;
+    background: @red;
+}
+
+#custom-cl_end {
+    border-radius: 19px 0px 0px 19px;
+    margin-left: 12px;
+    padding-left: 0px;
+    background: @red;
+}
+
+#custom-rr_end {
+    border-radius: 0px 19px 19px 0px;
+    margin-right: 12px;
+    padding-right: 0px;
+    background: @green;
+}
+
+#custom-rl_end {
+    border-radius: 19px 0px 0px 19px;
+    margin-left: 12px;
+    padding-left: 0px;
+    background: @green;
+}
+
+#custom-padd {
+  margin-left: 1px;
+}
+
+#custom-fpadd {
+  margin-right: 2px;
+}
+

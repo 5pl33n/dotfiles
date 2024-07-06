@@ -4,45 +4,35 @@
     "position": "top",
     "output": "eDP-1",
 
-    "modules-left": ["custom/padd","custom/ll_end", "cpu", "backlight", "custom/lr_end","custom/padd"],
-    "modules-center": ["custom/padd","custom/cl_end","hyprland/workspaces", "custom/cr_end","custom/padd"],
-    "modules-right": ["custom/padd","custom/rl_end","wireplumber", "network", "battery", "clock", "custom/powermenu", "custom/rr_end","custom/fpadd"],
+    "modules-left": ["cpu", "memory","backlight"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["wireplumber", "network", "battery", "clock"],
 
     "hyprland/workspaces": {
-        "disable-scroll": true,
         "all-outputs": true,
-        "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
-/*        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        }*/
+        "on-click": "activate"
     },
 
     "cpu": {
       "interval": 10,
-      "format": "    {usage}%",
+      "format": "  {usage}%",
+      "max-length": 10
+    },
+
+    "memory": {
+      "interval": 30,
+      "format": "  {}%",
       "max-length": 10
     },
 
     "backlight": {
-        "device": "nvidia_0",
-      	"max-length": "4",
-        "format": "{icon}   {percent}%",
+        "max-length": "4",
+        "format": "{icon}  {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "",
         "on-scroll-up": "brightnessctl set 10%-",
         "on-scroll-down": "brightnessctl set +10%"
     },
+
 
     "custom/dunst": {
         "exec": "~/.config/waybar/scripts/dunst.sh",
@@ -52,27 +42,17 @@
     },
 
     "wireplumber": {
-        "format": "{icon}    {volume}%",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "婢",
+        "format": "{icon}  {volume}%",
+        "format-muted": " 󰖁 ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
-        },
-        "on-click-right": "pavucontrol",
-	    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        }
     },
 
     "network": {
-        "format-wifi": "    {signalStrength}%",
-        "format-ethernet": "    wired",
-        "format-disconnected": "  󰈂  "
+        "format-wifi": "󰖩  {signalStrength}%",
+        "format-ethernet": "󰈀  wired",
+        "format-disconnected": "  disconnected"
     },
 
     "battery": {
@@ -84,75 +64,18 @@
           "critical": 15
       },
       "max-length": 20,
-      "format": "{icon}    {capacity}%",
-      "format-warning": "{icon}    {capacity}%",
-      "format-critical": "{icon}    {capacity}%",
-      "format-charging": "    {capacity}%",
-      "format-plugged": "    {capacity}%",
-      "format-alt": "{icon}    {time}",
-      "format-full": "    {capacity}%",
-      "format-icons": [" ", " ", " ", " ", " "]
+      "format": "{icon}  {capacity}%",
+      "format-warning": "{icon}  {capacity}%",
+      "format-critical": "{icon}  {capacity}%",
+      "format-charging": "  {capacity}%",
+      "format-plugged": "  {capacity}%",
+      "format-alt": "{icon}  {time}",
+      "format-full": "  {capacity}%",
+      "format-icons": ["", "", "", "", ""]
     },
 
     "clock": {
-        "format-alt": "<span>   </span> {:%a %b %d}",
-        "format": "<span>   </span> {:%I:%M %p}"
-    },
-
-    "custom/powermenu": {
-        "format": "",
-        "on-click": "wlogout -b 6 -c 0 -r 0 -m 0 --protocol layer-shell",
-        "tooltip": false
-    },
-
-
-// modules for padding //
-
-    "custom/ll_end": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/lr_end": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/cl_end": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/cr_end": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rl_end": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rr_end": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/padd": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/fpadd": {
-        "format": "     ",
-        "interval" : "once",
-        "tooltip": false
+        "format-alt": "  {:%a %b %d}",
+        "format": "  {:%I:%M %p}"
     }
 }

@@ -1,165 +1,99 @@
-* {
-    border: none;
-    border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    font-size: 12px;
-    min-height: 10px;
-}
-
 @import "mocha.css";
 
-window#waybar {
-    background: @base;
+* {
+    font-family: "CaskaydiaCove Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+    border-radius: 0;
 }
 
-tooltip {
-    background: @crust;
-    color: @text;
-    border-radius: 7px;
-    border-width: 0px;
+window#waybar {
+    background-color: @base;
+    color: @foreground;
+}
+
+#window {
+    margin: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #workspaces button {
-    box-shadow: none;
-  	text-shadow: none;
-    padding: 0px;
-    border-radius: 8px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-left: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-right: 0px;
-    color: @crust;
-    animation: ws_normal 20s ease-in-out 1;
+    color: @text;
+    border-bottom: 2px solid @text;
+}
+
+#workspaces button:focused {
+    color: @base;
 }
 
 #workspaces button.active {
-    background: @base;
-    color: @text;
-    margin-left: 2px;
-    padding-left: 11px;
-    padding-right: 11px;
-    margin-right: 2px;
-    animation: ws_active 20s ease-in-out 1;
-    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+    color: @red;
+    border-bottom: 2px solid @red;
 }
 
-#workspaces button:hover {
-    background: @sky;
-    color: @base;
-    animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-#custom-powermenu,
-#wireplumber,
-#backlight,
-#battery,
-#bluetooth,
-#custom-cliphist,
-#clock,
-#custom-cpuinfo,
-#cpu,
-#custom-gpuinfo,
-#idle_inhibitor,
-#custom-keybindhint,
-#language,
-#memory,
-#mpris,
-#network,
-#custom-notifications,
-#custom-power,
-#pulseaudio,
-#custom-spotify,
-#taskbar,
-#custom-theme,
-#tray,
-#custom-updates,
-#custom-wallchange,
-#custom-wbar,
-#window,
 #workspaces,
-#custom-ll_end,
-#custom-lr_end,
-#custom-cl_end,
-#custom-cr_end,
-#custom-rl_end,
-#custom-rr_end {
-    color: @base;
-    background: @sapphire;
-    opacity: 1;
-    margin: 3px 0px 3px 0px;
+#network,
+#pipewire,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#mode,
+#scratchpad {
+    margin: 2px;
     padding-left: 4px;
     padding-right: 4px;
 }
 
-#cpu,
+#clock {
+    color: @maroon;
+    border-bottom: 2px solid @maroon;
+}
+
+#clock.date {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+}
+
+#wireplumber {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+}
+
+#network {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#cpu {
+    color: @peach;
+    border-bottom: 2px solid @peach;
+}
+
+#memory {
+    color: @sky;
+    border-bottom: 2px solid @sky;
+}
+
 #backlight {
-  background: @blue;
+    color: @lavander;
+    border-bottom: 2px solid @lavander;
 }
 
-#workspaces,
-#taskbar {
-   padding: 0px;
-   background: @red;
+#battery {
+    color: @green;
+    border-bottom: 2px solid @green;
 }
 
-#wireplumber,
-#network,
-#battery,
-#clock,
-#custom-powermenu {
-  background: @green;
+#custom-vpn {
+    color: @lavender;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
-
-#custom-lr_end {
-    border-radius: 0px 19px 19px 0px;
-    margin-right: 12px;
-    padding-right: 0px;
-    background: @blue;
-}
-
-#custom-ll_end {
-    border-radius: 19px 0px 0px 19px;
-    margin-left: 12px;
-    padding-left: 0px;
-    background: @blue;
-}
-
-#custom-cr_end {
-    border-radius: 0px 19px 19px 0px;
-    margin-right: 12px;
-    padding-right: 0px;
-    background: @red;
-}
-
-#custom-cl_end {
-    border-radius: 19px 0px 0px 19px;
-    margin-left: 12px;
-    padding-left: 0px;
-    background: @red;
-}
-
-#custom-rr_end {
-    border-radius: 0px 19px 19px 0px;
-    margin-right: 12px;
-    padding-right: 0px;
-    background: @green;
-}
-
-#custom-rl_end {
-    border-radius: 19px 0px 0px 19px;
-    margin-left: 12px;
-    padding-left: 0px;
-    background: @green;
-}
-
-#custom-padd {
-  margin-left: 1px;
-}
-
-#custom-fpadd {
-  margin-right: 2px;
-}
-
