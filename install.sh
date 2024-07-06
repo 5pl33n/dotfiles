@@ -5,7 +5,7 @@ sudo sed -i 's@spleen ALL=(ALL) ALL@spleen ALL=(ALL) NOPASSWD:ALL@g' /etc/sudoer
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+yes | makepkg -si
 cd ..
 rm -rf yay
 
