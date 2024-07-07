@@ -23,7 +23,7 @@ window#waybar {
     border-bottom: 2px solid @text;
 }
 
-#workspaces button:focused {
+#workspaces button:focus {
     color: @base;
 }
 
