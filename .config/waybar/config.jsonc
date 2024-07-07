@@ -51,8 +51,8 @@
 
     "network": {
         "format-wifi": "󰖩  {signalStrength}%",
-        "format-ethernet": "󰈀  wired",
-        "format-disconnected": "  disconnected"
+        "format-ethernet": " 󰈀  ",
+        "format-disconnected": "  "
     },
 
     "battery": {
