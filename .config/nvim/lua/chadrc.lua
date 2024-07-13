@@ -5,16 +5,17 @@
 local M = {}
 
 M.ui = {
-	theme = "catppuccin",
+  theme = "catppuccin",
+
   statusline = {
     theme = "minimal",
     separator_style = "round"
-  }
+  },
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+  hl_override = {
+  	Comment = { italic = true },
+  	["@comment"] = { italic = true },
+  },
 }
 
 return M
