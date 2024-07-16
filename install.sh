@@ -19,12 +19,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cp -a ~/5pl33n/dotfiles/. ~/
 
-chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh spleen
 
 sudo wget -O /usr/share/sddm/themes/catppuccin-mocha.zip https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip
 cd /usr/share/sddm/themes/ 
 sudo unzip catppuccin-mocha.zip
-rm catppuccin-mocha.zip
+sudo rm catppuccin-mocha.zip
 cd
 
 rm -rf .git
