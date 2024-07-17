@@ -36,6 +36,7 @@ require("telescope").setup {
       additional_args = function()
         return { "--hidden" }
       end,
+      vimgrep_arguments = table.insert(require("telescope.config").values.vimgrep_arguments, "--fixed-strings"),
     },
   },
 }
