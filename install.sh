@@ -32,5 +32,9 @@ rm -rf .git
 sudo mkdir -p /etc/sddm.conf.d/
 sudo mv sddm.conf /etc/sddm.conf.d/mocha.conf
 
+sudo sed -i 's@#Color@Color@g' /etc/pacman.conf
+sudo sed -i 's@#VerbosePkgLists@VerbosePkgLists@g' /etc/pacman.conf
+sudo sed -i 's@#ParallelDownloads@ParallelDownloads@g' /etc/pacman.conf
+
 sudo systemctl enable sddm
 sudo systemctl enable bluetooth
