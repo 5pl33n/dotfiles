@@ -1,13 +1,9 @@
 #!/usr/bin/env sh
 
-if [ -z "$XDG_PICTURES_DIR" ] ; then
-    XDG_PICTURES_DIR="$HOME/Pictures"
-fi
+XDG_PICTURES_DIR="$HOME/pictures"
 
-ScrDir=`dirname "$(realpath "$0")"`
-source $ScrDir/globalcontrol.sh
-swpy_dir="${XDG_CONFIG_HOME:-$HOME/.config}/swappy"
-save_dir="${2:-$XDG_PICTURES_DIR/Screenshots}"
+swpy_dir="$HOME/.config/swappy"
+save_dir="$XDG_PICTURES_DIR/screenshots"
 save_file=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')
 temp_screenshot="/tmp/screenshot.png"
 
