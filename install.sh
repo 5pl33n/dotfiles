@@ -37,5 +37,7 @@ sudo sed -i 's@#NoProgressBar@ILoveCandy@g' /etc/pacman.conf
 sudo sed -i 's@#VerbosePkgLists@VerbosePkgLists@g' /etc/pacman.conf
 sudo sed -i 's@#ParallelDownloads@ParallelDownloads@g' /etc/pacman.conf
 
+chmod +x ~/.config/hypr/scripts/*
+
 sudo systemctl enable sddm
 sudo systemctl enable bluetooth
