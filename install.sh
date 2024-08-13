@@ -39,8 +39,5 @@ sudo sed -i 's@#ParallelDownloads@ParallelDownloads@g' /etc/pacman.conf
 
 chmod +x ~/.config/hypr/scripts/*
 
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Mocha'
-
 sudo systemctl enable sddm
 sudo systemctl enable bluetooth
