@@ -59,7 +59,7 @@ alias pl='$aurhelper -Qs' # list installed package
 alias pa='$aurhelper -Ss' # list availabe package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
-alias fix-slack='sudo sed -i s@WebRTCPipeWireCapturer@LebRTCPipeWireCapturer@g usr/lib/slack/resources/app.asar' 
+alias fix-slack='sudo sed -i s@WebRTCPipeWireCapturer@LebRTCPipeWireCapturer@g /usr/lib/slack/resources/app.asar' 
 
 # Handy change dir shortcuts
 alias ..='cd ..'
